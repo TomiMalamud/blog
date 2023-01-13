@@ -1,17 +1,17 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-	name: 'AstroWind',
+	name: 'Blog de ROHI Sommiers',
 
-	origin: 'https://astrowind.vercel.app',
+	origin: 'https://blog.rohisommiers.com',
 	basePathname: '/',
 	trailingSlash: false,
 
-	title: 'AstroWind — Your website with Astro + Tailwind CSS',
-	description: '🚀 AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.',
+	title: 'Blog de ROHI Sommiers',
+	description: 'Enterate de las novedades sobre cómo mejorar el sueño y la calidad de descanso en nuestro blog.',
 	defaultImage: defaultImage,
 
-	defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+	defaultTheme: 'light', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
 	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',

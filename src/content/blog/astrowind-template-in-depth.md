@@ -2,10 +2,11 @@
 publishDate: 'Aug 08 2022'
 title: 'AstroWind template in depth'
 description: 'Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti.'
+author: 'Tomás M.'
 image: '~/assets/images/old.jpg'
-category: 'Tutorials'
-tags: [astro, tailwind css, front-end]
-canonical: https://astrowind.vercel.app/astrowind-template-in-depth # When posting content to multiple platforms at the same time (such as this website and Medium) and want to specify the ultimate authority. Remove it to automatically generate canonical
+category: 'Guias'
+tags: [guía, colchones, sueño]
+canonical: https://blog.rohisommiers.com/astrowind-template-in-depth # When posting content to multiple platforms at the same time (such as this website and Medium) and want to specify the ultimate authority. Remove it to automatically generate canonical
 ---
 
 ## Dictum integer fusce ac ridiculus et odio sollicitudin diam at

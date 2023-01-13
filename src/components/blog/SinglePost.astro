@@ -15,19 +15,35 @@ export interface Props {
 const { post, url } = Astro.props;
 ---
 
-<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+<section class="py-4 sm:py-8 lg:py-10 mx-auto">
 	<article>
 		<header class={post.image ? 'text-center' : ''}>
-			<p class="px-4 sm:px-6 max-w-3xl mx-auto">
-				<time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time> ~ {
+			<PostTags tags={post.tags} />
+			<p class="text-sm sm:text-lg px-4 sm:px-6 max-w-3xl mt-4 mx-auto text-gray-500">
+				<time datetime={String(post.publishDate)} class="-ml-1">{getFormattedDate(post.publishDate)}</time> ~ {
 					Math.ceil(post.readingTime)
-				} min read
+				} minutos de lectura
 			</p>
 			<h1
-				class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading"
+				class="px-4 sm:px-6 max-w-3xl mx-auto mt-2 text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading"
 			>
 				{post.title}
 			</h1>
+			<p class="px-4 sm:px-6 max-w-3xl mx-auto text-lg md:text-xl mb-8 text-gray-500">
+				{post.excerpt}
+			</p>
+			<div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between sm:flex-row items-center">
+				{
+					post.author ? (
+						<>
+							<span class="text-gray-700">Por: {post.author}</span>
+						</>
+					) : (
+						<span />
+					)
+				}
+				<SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
+			</div>
 			{
 				post.image ? (
 					<Picture
@@ -62,8 +78,8 @@ const { post, url } = Astro.props;
 				)
 			}
 		</div>
-		<div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
-			<PostTags tags={post.tags} class="mr-5" />
+		<div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row items-center">
+			<PostTags tags={post.tags} />
 			<SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
 		</div>
 	</article>

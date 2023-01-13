@@ -6,11 +6,11 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: colors.blue,
+				primary: colors.neutral,
 				secondary: colors.pink,
 			},
 			fontFamily: {
-				sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],
+				sans: ['"Public Sans"', "InterVariable", ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},
