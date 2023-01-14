@@ -2,7 +2,7 @@
 import { Picture } from '@astrojs/image/components';
 import PostTags from '~/components/common/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
-
+import { Schema } from 'astro-seo-schema';
 import { getFormattedDate } from '~/utils/utils';
 
 import type { Post } from '~/types';
@@ -13,36 +13,66 @@ export interface Props {
 }
 
 const { post, url } = Astro.props;
----
 
+const publishedAt = new Date(post.publishDate).toISOString()
+
+const slug = post.canonical?.toString()
+---
+<Schema
+	item={{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"mainEntityOfPage": {
+		  "@type": "WebPage",
+		  "@id": slug
+		},
+		"headline": post.title,
+		"image": "https://blog.rohisommiers.com/assets/steps.21b3bbe9_Z1zSFLX.avif",  
+		"author": {
+		  "@type": "Person",
+		  "name": post.author,
+		  "url": "https://blog.rohisommiers.com"
+		},  
+		"publisher": {
+		  "@type": "Organization",
+		  "name": "ROHI Sommiers",
+		  "logo": {
+			"@type": "ImageObject",
+			"url": "https://blog.rohisommiers.com/assets/Logo.558fd22b.svg"
+		  }
+		},
+		"datePublished": publishedAt,
+		"dateModified": publishedAt,
+	  }}
+/>
 <section class="py-4 sm:py-8 lg:py-10 mx-auto">
 	<article>
-		<header class={post.image ? 'text-center' : ''}>
-			<PostTags tags={post.tags} />
+		<header class={post.image ? 'text-left' : ''}>
+			<PostTags tags={post.tags} class="px-4 sm:px-6 max-w-3xl mt-4 mx-auto" />
 			<p class="text-sm sm:text-lg px-4 sm:px-6 max-w-3xl mt-4 mx-auto text-gray-500">
-				<time datetime={String(post.publishDate)} class="-ml-1">{getFormattedDate(post.publishDate)}</time> ~ {
+				<time datetime={String(post.publishDate)} class="ml-1">{getFormattedDate(post.publishDate)}</time> ~ {
 					Math.ceil(post.readingTime)
 				} minutos de lectura
 			</p>
 			<h1
-				class="px-4 sm:px-6 max-w-3xl mx-auto mt-2 text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading"
+				class="px-4 sm:px-6 max-w-3xl mx-auto mt-4 text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-6 font-heading"
 			>
 				{post.title}
 			</h1>
-			<p class="px-4 sm:px-6 max-w-3xl mx-auto text-lg md:text-xl mb-8 text-gray-500">
+			<p class="px-4 sm:px-6 max-w-3xl mx-auto text-lg md:text-xl mb-6 text-gray-500">
 				{post.excerpt}
 			</p>
-			<div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between sm:flex-row items-center">
+			<div class="mx-auto px-4 sm:px-6 max-w-3xl mt-8 mb-8 flex justify-between sm:flex-row align-center items-center">
 				{
 					post.author ? (
 						<>
-							<span class="text-gray-700">Por: {post.author}</span>
+							<span class="text-gray-700 text-sm flex sm:text-lg">Por: {post.author}</span>
 						</>
 					) : (
 						<span />
 					)
 				}
-				<SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
+				<SocialShare url={url} text={post.title} class="flex align-middle text-gray-500 text-md dark:text-slate-600" />
 			</div>
 			{
 				post.image ? (

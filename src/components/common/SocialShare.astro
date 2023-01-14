@@ -11,7 +11,7 @@ const { text, url, class: className = 'inline-block' } = Astro.props;
 ---
 
 <div class={className}>
-	<span class="align-super font-bold">Compartir:</span>
+	<span class="align-super font-bold hidden sm:inline-block">Compartir:</span>
 	<button class="ml-2" title="Twitter Share" data-aw-social-share="twitter" data-aw-url={url} data-aw-text={text}
 		><Icon name="tabler:brand-twitter" class="w-6 h-6 text-gray-500 dark:text-gray-400 hover:text-gray-900 " />
 	</button>
@@ -23,8 +23,5 @@ const { text, url, class: className = 'inline-block' } = Astro.props;
 	</button>
 	<button class="ml-2" title="Whatsapp Share" data-aw-social-share="whatsapp" data-aw-url={url} data-aw-text={text}
 		><Icon name="tabler:brand-whatsapp" class="w-6 h-6 text-gray-500 dark:text-gray-400 hover:text-gray-900 " />
-	</button>
-	<button class="ml-2" title="Email Share" data-aw-social-share="mail" data-aw-url={url} data-aw-text={text}
-		><Icon name="tabler:mail" class="w-6 h-6 text-gray-500 dark:text-gray-400 hover:text-gray-900 " />
 	</button>
 </div>

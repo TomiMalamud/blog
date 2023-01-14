@@ -1,5 +1,5 @@
 ---
-import { BLOG } from '~/config.mjs';
+import { BLOG, SITE } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import SinglePost from '~/components/blog/SinglePost.astro';
@@ -26,6 +26,7 @@ const url = getCanonical(getPermalink(post.slug, 'post'));
 const meta = {
 	title: post.title,
 	description: post.description,
+	author: SITE.author,
 	canonical: post.canonical || undefined,
 	image: await findImage(post.image),
 	noindex: BLOG?.post?.noindex,
@@ -34,7 +35,6 @@ const meta = {
 ---
 
 <Layout {meta}>
-	<ToBlogLink />
 	<SinglePost post={{ ...post, image: meta.image }} url={url} />
 	<ToBlogLink />
 </Layout>

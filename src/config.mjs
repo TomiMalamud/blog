@@ -9,6 +9,7 @@ const CONFIG = {
 
 	title: 'Blog de ROHI Sommiers',
 	description: 'Enterate de las novedades sobre cómo mejorar el sueño y la calidad de descanso en nuestro blog.',
+	author: 'ROHI Sommiers',
 	defaultImage: defaultImage,
 
 	defaultTheme: 'light', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
