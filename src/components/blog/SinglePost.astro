@@ -4,6 +4,9 @@ import PostTags from '~/components/common/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
 import { Schema } from 'astro-seo-schema';
 import { getFormattedDate } from '~/utils/utils';
+import { SITE } from '~/config.mjs';
+import { getImage } from '@astrojs/image';
+import { getRelativeUrlByFilePath } from '~/utils/directories';
 
 import type { Post } from '~/types';
 
@@ -12,11 +15,31 @@ export interface Props {
 	url: string | URL;
 }
 
-const { post, url } = Astro.props;
+const defaultImage = SITE.defaultImage
+	? (
+			await getImage({
+				src: SITE.defaultImage,
+				alt: 'Default image',
+				width: 1200,
+				height: 628,
+			})
+	  ).src
+	: '';
+
+const { post, url, image: _image = defaultImage,
+ } = Astro.props;
 
 const publishedAt = new Date(post.publishDate).toISOString()
 
 const slug = post.canonical?.toString()
+
+const image =
+	typeof _image === 'string'
+		? new URL(_image, Astro.site)
+		: _image && typeof _image['src'] !== 'undefined'
+		? // @ts-ignore
+		  new URL(getRelativeUrlByFilePath(_image.src), Astro.site)
+		: null;
 ---
 <Schema
 	item={{
@@ -27,7 +50,7 @@ const slug = post.canonical?.toString()
 		  "@id": slug
 		},
 		"headline": post.title,
-		"image": post.image,  
+		"image": image.toString(),  
 		"author": {
 		  "@type": "Person",
 		  "name": post.author,
