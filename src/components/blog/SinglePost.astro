@@ -27,7 +27,7 @@ const slug = post.canonical?.toString()
 		  "@id": slug
 		},
 		"headline": post.title,
-		"image": "https://blog.rohisommiers.com/assets/steps.21b3bbe9_Z1zSFLX.avif",  
+		"image": post.image,  
 		"author": {
 		  "@type": "Person",
 		  "name": post.author,
@@ -79,13 +79,11 @@ const slug = post.canonical?.toString()
 					<Picture
 						src={post.image}
 						class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
-						widths={[400, 900]}
-						sizes="(max-width: 900px) 400px, 900px"
+						widths={[400, 900, 1200]}
+						sizes="(max-width: 1200px) 400px, 900px,1200px"
 						alt={post.description || ''}
 						loading="eager"
 						aspectRatio={16 / 9}
-						width={900}
-						height={506}
 					/>
 				) : (
 					<div class="max-w-3xl mx-auto px-4 sm:px-6">
@@ -95,7 +93,7 @@ const slug = post.canonical?.toString()
 			}
 		</header>
 		<div
-			class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+			class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-[#3483fa] hover:prose-a:text-[#3483fa]/80 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
 		>
 			{
 				post.Content ? (

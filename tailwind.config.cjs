@@ -8,6 +8,7 @@ module.exports = {
 			colors: {
 				primary: colors.neutral,
 				secondary: colors.pink,
+				'rohi': "#51302d",
 			},
 			fontFamily: {
 				sans: ['"Public Sans"', "InterVariable", ...defaultTheme.fontFamily.sans],

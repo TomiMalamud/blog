@@ -1,49 +1,72 @@
 ---
 import { Icon } from 'astro-icon';
+import { Schema } from 'astro-seo-schema';
 
 const items = [
 	[
 		{
-			question: 'Qué colchón comprar?',
-			answer: `Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.
-
-    Many say exploration is part of our destiny, but it’s actually our duty to future generations.`,
+			question: '¿Qué colchón comprar?',
+			answer: `En realidad, no existe un sólo colchón que se adapte a todas las personas. Para saber qué colchón comprar, es importante que entiendas tus necesidades y gustos personales. Podés hablar con expertos que te guíen con eso.`,
 		},
 		{
-			question: 'How to install the Astro + Tailwind CSS template?',
-			answer: `Well, the way they make shows is, they make one show. That show's called a pilot.
+			question: '¿Cuál colchón es mejor? ¿De espuma o de resortes?',
+			answer: `Ambos tipos de colchones son buenos, pero tienen características muy distintas entre sí. El de espuma es un colchón bien firme, a mayor precio, mayor densidad, y por lo tanto mayor firmeza. El colchón de resortes puede ser más complejo de definir, pero por lo general el colchón de resortes es mucho más flexible - blandito - que el de espuma.`,
+		},
 
-    Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.`,
-		},
-		{
-			question: "What's something that you completely don't understand?",
-			answer: `A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.`,
-		},
 	],
 	[
 		{
-			question: "What's an example of when you changed your mind?",
-			answer: `Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.`,
+			question: "¿Cómo elegir el colchón?",
+			answer: `Hay 4 puntos clave a tener en cuenta: el presupuesto, el tamaño, la firmeza y el soporte. Cada una se define individualmente para cada persona y no se podría hacer una regla general para que cumpla todos los casos.`,
 		},
 		{
-			question: 'What is something that you would really like to try again?',
-			answer: `A business big enough that it could be listed on the NASDAQ goes belly up. Disappears!
-
-      It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.`,
-		},
-		{
-			question: 'If you could only ask one question to each person you meet, what would that question be?',
-			answer: `This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.`,
+			question: "¿Cuándo cambiar el colchón?",
+			answer: `Depende del uso y cuidado que haya tenido el colchón, pero por lo general se estima que cada 8 a 12 años, se debe cambiar el colchón. Las razones que pueden llegar a causar el cambio son variadas, entre ellas: aparición de ácaros con el tiempo, deformaciones del colchón, hundimientos, etc. `,
 		},
 	],
 ];
 ---
 
+<Schema item={
+	{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "¿Qué colchón comprar?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "En realidad, no existe un sólo colchón que se adapte a todas las personas. Para saber qué colchón comprar, es importante que entiendas tus necesidades y gustos personales. Podés hablar con expertos que te guíen con eso."
+    }
+  },{
+    "@type": "Question",
+    "name": "¿Cuál colchón es mejor? ¿De espuma o de resortes?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ambos tipos de colchones son buenos, pero tienen características muy distintas entre sí. El de espuma es un colchón bien firme, a mayor precio, mayor densidad, y por lo tanto mayor firmeza. El colchón de resortes puede ser más complejo de definir, pero por lo general el colchón de resortes es mucho más flexible - blandito - que el de espuma."
+    }
+  },{
+    "@type": "Question",
+    "name": "¿Cómo elegir el colchón?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hay 4 puntos clave a tener en cuenta: el presupuesto, el tamaño, la firmeza y el soporte. Cada una se define individualmente para cada persona y no se podría hacer una regla general para que cumpla todos los casos."
+    }
+  },{
+    "@type": "Question",
+    "name": "¿Cuándo cambiar el colchón?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende del uso y cuidado que haya tenido el colchón, pero por lo general se estima que cada 8 a 12 años, se debe cambiar el colchón. Las razones que pueden llegar a causar el cambio son variadas, entre ellas: aparición de ácaros con el tiempo, deformaciones del colchón, hundimientos, etc."
+    }
+  }]
+}
+} />
 <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
 	<div class="max-w-xl sm:mx-auto lg:max-w-2xl">
 		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
 			<h2 class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
-				Frequently Asked Questions
+				Lo que más nos preguntan
 			</h2>
 		</div>
 	</div>
