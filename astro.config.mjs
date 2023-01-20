@@ -10,6 +10,8 @@ import compress from 'astro-compress';
 import { remarkReadingTime } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/config.mjs';
 import robotsTxt from "astro-robots-txt";
+import { inject } from '@vercel/analytics';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const whenExternalScripts = (items = []) => SITE.googleAnalyticsId ? Array.isArray(items) ? items.map(item => item()) : [items()] : [];
 
@@ -38,7 +40,7 @@ export default defineConfig({
     js: true,
     svg: false,
     logger: 1
-  }), robotsTxt()],
+  }), robotsTxt(), inject()],
   markdown: {
     remarkPlugins: [remarkReadingTime],
     extendDefaultPlugins: true
