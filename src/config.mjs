@@ -14,7 +14,7 @@ const CONFIG = {
 
 	defaultTheme: 'light', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
-	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
+	googleAnalyticsId: "G-6Z6TF5KZBG", // or "G-XXXXXXXXXX",
 	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
 
 	blog: {
