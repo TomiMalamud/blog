@@ -1,58 +1,73 @@
 import slugify from 'limax';
 
 import { SITE, BLOG } from '~/config.mjs';
+import { trim } from '~/utils/utils';
 
-const trim = (str = '', ch?: string) => {
-	let start = 0,
-		end = str.length || 0;
-	while (start < end && str[start] === ch) ++start;
-	while (end > start && str[end - 1] === ch) --end;
-	return start > 0 || end < str.length ? str.substring(start, end) : str;
-};
-
-const trimSlash = (s: string) => trim(trim(s, '/'));
+export const trimSlash = (s: string) => trim(trim(s, '/'));
 const createPath = (...params: string[]) => {
-	const paths = params.filter((el) => !!el).join('/');
-	return '/' + paths + (SITE.trailingSlash && paths ? '/' : '');
+  const paths = params
+    .map((el) => trimSlash(el))
+    .filter((el) => !!el)
+    .join('/');
+  return '/' + paths + (SITE.trailingSlash && paths ? '/' : '');
 };
 
-const basePathname = trimSlash(SITE.basePathname);
+const BASE_PATHNAME = SITE.basePathname;
 
-export const cleanSlug = (text: string) =>
-	trimSlash(text)
-		.split('/')
-		.map((slug) => slugify(slug))
-		.join('/');
+export const cleanSlug = (text = '') =>
+  trimSlash(text)
+    .split('/')
+    .map((slug) => slugify(slug))
+    .join('/');
+
+export const POST_PERMALINK_PATTERN = trimSlash(BLOG?.post?.permalink || '/%slug%');
 
 export const BLOG_BASE = cleanSlug(BLOG?.list?.pathname);
-export const POST_BASE = cleanSlug(BLOG?.post?.pathname);
-export const CATEGORY_BASE = cleanSlug(BLOG?.category?.pathname);
-export const TAG_BASE = cleanSlug(BLOG?.tag?.pathname);
+export const CATEGORY_BASE = cleanSlug(BLOG?.category?.pathname || 'category');
+export const TAG_BASE = cleanSlug(BLOG?.tag?.pathname) || 'tag';
 
 /** */
 export const getCanonical = (path = ''): string | URL => new URL(path, SITE.origin);
 
 /** */
 export const getPermalink = (slug = '', type = 'page'): string => {
-	switch (type) {
-		case 'category':
-			return createPath(basePathname, CATEGORY_BASE, cleanSlug(slug));
+  let permalink: string;
 
-		case 'tag':
-			return createPath(basePathname, TAG_BASE, cleanSlug(slug));
+  switch (type) {
+    case 'category':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
 
-		case 'post':
-			return createPath(basePathname, POST_BASE, cleanSlug(slug));
-	}
+    case 'tag':
+      permalink = createPath(TAG_BASE, trimSlash(slug));
+      break;
 
-	return createPath(basePathname, trimSlash(slug));
+    case 'post':
+      permalink = createPath(trimSlash(slug));
+      break;
+
+    case 'page':
+    default:
+      permalink = createPath(slug);
+      break;
+  }
+
+  return definitivePermalink(permalink);
 };
 
 /** */
-export const getHomePermalink = (): string => {
-	const permalink = getPermalink();
-	return !permalink.startsWith('/') ? '/' + permalink : permalink;
-};
+export const getHomePermalink = (): string => getPermalink('/');
 
 /** */
 export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
+
+/** */
+export const getAsset = (path: string): string =>
+  '/' +
+  [BASE_PATHNAME, path]
+    .map((el) => trimSlash(el))
+    .filter((el) => !!el)
+    .join('/');
+
+/** */
+const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);

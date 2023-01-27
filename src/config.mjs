@@ -14,6 +14,16 @@ const CONFIG = {
 
 	defaultTheme: 'light', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
+	language: 'es',
+	textDirection: 'ltr',
+
+	dateFormatter: new Intl.DateTimeFormat('es', {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+		timeZone: 'UTC',
+	}),
+
 	googleAnalyticsId: "G-6Z6TF5KZBG", // or "G-XXXXXXXXXX",
 	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
 
@@ -21,14 +31,14 @@ const CONFIG = {
 		disabled: false,
 		postsPerPage: 4,
 
-		list: {
-			pathname: 'blog', // blog main path, you can change this to "articles" (/articles)
+		post: {
+			permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
 			noindex: false,
 			disabled: false,
 		},
 
-		post: {
-			pathname: '', // empty for /some-post, value for /pathname/some-post
+		list: {
+			pathname: 'blog', // blog main path, you can change this to "articles" (/articles)
 			noindex: false,
 			disabled: false,
 		},
@@ -49,3 +59,4 @@ const CONFIG = {
 
 export const SITE = { ...CONFIG, blog: undefined };
 export const BLOG = CONFIG.blog;
+export const DATE_FORMATTER = CONFIG.dateFormatter;

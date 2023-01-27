@@ -43,7 +43,6 @@ export default defineConfig({
   }), robotsTxt(), inject()],
   markdown: {
     remarkPlugins: [remarkReadingTime],
-    extendDefaultPlugins: true
   },
   vite: {
     resolve: {
@@ -52,7 +51,4 @@ export default defineConfig({
       }
     }
   },
-  experimental: {
-    contentCollections: true
-  }
 });

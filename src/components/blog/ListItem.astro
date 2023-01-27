@@ -16,7 +16,7 @@ export interface Props {
 const { post } = Astro.props;
 const image = await findImage(post.image);
 
-const link = !BLOG?.post?.disabled ? getPermalink(post.slug, 'post') : '';
+const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, 'post') : '';
 ---
 
 <article class={`max-w-md group md:hover:bg-gray-50 rounded mx-auto md:py-8 md:px-16 md:max-w-none grid gap-6 md:gap-8 ${image ? 'md:grid-cols-2' : ''}`}>
@@ -62,7 +62,7 @@ const link = !BLOG?.post?.disabled ? getPermalink(post.slug, 'post') : '';
 			<div>
 				<span class="text-gray-500 dark:text-slate-400">
 					<time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time> ~
-					{Math.ceil(post.readingTime)} min de lectura
+					4 min de lectura
 				</span>
 			</div>
 			<div class="mt-4">

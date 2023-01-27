@@ -2,7 +2,7 @@
 publishDate: '19 Jan 2023'
 title: 'Cómo elegir un buen colchón'
 description: 'Guía definitiva para encontrar el mejor colchón para vos.'
-excerpt: '¿Sabías que pasamos un tercio de nuestras vidas acostados? Esta es la guía definitiva para elegir un colchón ideal para vos, traido de la mano de ROHI Sommiers.'
+excerpt: '¿Sabías que pasamos un tercio de nuestras vidas acostados? Esta es la guía definitiva para elegir un colchón ideal para vos, traído de la mano de ROHI Sommiers.'
 author: 'Tomás Malamud'
 image: '~/assets/images/comprando-en-colchon.jpg'
 category: 'Guías de compra'
@@ -46,7 +46,7 @@ Es ideal medir el ancho de la habitación en la que va a estar el sommier, y con
 
 ### Altura del colchón
 
-La mayoría de personas mide la calidad de un colchón por su altura, pero aunque no lo creas, casi no afecta a la durabilidad del colchón. La altura es importante cuando tenés que considerar la facilidad de sentarse-levantarse. A mayor altura, mayor facilidad, y puede ser imporante para personas mayores o con movilidad reducida.
+La mayoría de personas mide la calidad de un colchón por su altura, pero aunque no lo creas, casi no afecta a la durabilidad del colchón. La altura es importante cuando tenés que considerar la facilidad de sentarse-levantarse. A mayor altura, mayor facilidad, y puede ser importante para personas mayores o con movilidad reducida.
 
 3. ## Soporte
 

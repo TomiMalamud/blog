@@ -73,9 +73,8 @@ const image =
 		<header class={post.image ? 'text-left' : ''}>
 			<PostTags tags={post.tags} class="px-4 sm:px-6 max-w-3xl mt-4 mx-auto" />
 			<p class="text-sm sm:text-lg px-4 sm:px-6 max-w-3xl mt-4 mx-auto text-gray-500">
-				<time datetime={String(post.publishDate)} class="ml-1">{getFormattedDate(post.publishDate)}</time> ~ {
-					Math.ceil(post.readingTime)
-				} minutos de lectura
+				<time datetime={String(post.publishDate)} class="ml-1">{getFormattedDate(post.publishDate)}</time> ~ 
+					4 minutos de lectura
 			</p>
 			<h1
 				class="px-4 sm:px-6 max-w-3xl mx-auto mt-4 text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-6 font-heading"
