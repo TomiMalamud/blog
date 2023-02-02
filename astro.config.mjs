@@ -27,7 +27,11 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), sitemap(), image({
+  }), sitemap({
+    changefreq: 'weekly',
+    priority: 1,
+    lastmod: new Date(),
+  }), image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), mdx(), ...whenExternalScripts(() => partytown({
     config: {

@@ -1,5 +1,5 @@
 ---
-publishDate: '19 Jan 2023'
+publishDate: '2 Feb 2023'
 title: 'Cómo elegir una buena almohada'
 description: 'Guía definitiva para encontrar la mejor almohada para vos.'
 excerpt: 'Elegir una almohada y no equivocarse puede no ser una tarea fácil. Con esta guía breve esperamos poder ayudarte a elegir la mejor almohada para vos.'
