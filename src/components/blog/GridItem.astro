@@ -19,12 +19,12 @@ const image = await findImage(post.image);
 <article class="mb-6 transition">
 	<div class="group">
 		<a class="relative block overflow-hidden" href={getPermalink(post.permalink, 'post')} title={post.title}>
-			<div class="relative overflow-hidden h-80 bg-gray-400 dark:bg-slate-700 rounded shadow mb-6">
+			<div class="relative overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow mb-6">
 				{
 					image && (
 						<Picture
 							src={image}
-							class="object-content w-full rounded group-hover:scale-105 ease-out duration-500 shadow bg-gray-400 dark:bg-slate-700"
+							class="object-cover w-full rounded group-hover:scale-105 ease-out duration-500 shadow bg-gray-400 dark:bg-slate-700"
 							widths={[400, 900]}
 							sizes="(max-width: 900px) 400px, 900px"
 							alt={post.title}
