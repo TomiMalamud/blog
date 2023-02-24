@@ -20,7 +20,7 @@ Por lo general, cuando estás buscando un [colchón](https://www.rohisommiers.co
 > En pocas palabras: la espuma ofrece sensación firme, y el colchón de resortes ofrece una sensación más "blandita".
 
 1. ## Espuma
-![Interior de un colchón de espuma](src/assets/images/espuma.jpg 'Interior de un colchón de espuma')
+![Interior de un colchón de espuma](public/assets/espuma.jpg 'Interior de un colchón de espuma')
 Los colchones de [espuma](https://www.rohisommiers.com/colchones/?mpage=2&Tipo%20De%20Relleno=Espuma) se caracterizan por su **densidad** (kg/m<sup>3</sup>). A mayor densidad, mayor firmeza, durabilidad, soporte, y precio. Por lo general, si buscás un colchón que no sea muy duro, te conviene **descartar esta opción**.
 
 La densidad de colchones suelen ser de:
@@ -46,18 +46,18 @@ Los colchones de [resortes](https://www.rohisommiers.com/colchones/?mpage=2&Tipo
 Se clasifican en dos tipos:
 
 #### Resortes bonell
-![Resortes Bonell](src/assets/images/Bonnell-Springs.jpg "Resortes bonell")
+![Resortes Bonell](public/assets/Bonnell-Springs.jpg "Resortes bonell")
 
 Son los más reforzados y comunes, y la parrilla de resortes es continua. 
 
 #### Resortes pocket individuales
-![Resortes Pocket Individuales](src/assets/images/pocket.png "Resortes pocket individuales")
+![Resortes Pocket Individuales](public/assets/pocket.png "Resortes pocket individuales")
 
 Es un tipo de resortes más nuevo, en el que cada uno está enfundado con tela. Evita que se traslade el movimiento de una persona a la otra y se adapta de forma más anatómica a la presión del cuerpo.
 
 ### Ventajas 
 - Los colchones de alta gama suelen tener mejoras más notorias.
-- Los colchones (pocket)[https://www.rohisommiers.com/search/?q=pocket] ofrecen una sensación premium difícil de encontrar en otros tipos de relleno.
+- Los colchones [pocket](https://www.rohisommiers.com/search/?q=pocket) ofrecen una sensación premium difícil de encontrar en otros tipos de relleno.
 - Ofrece una sensasión más mullida en comparación a espuma, por lo que recomendamos mucho los colchones de resortes para quienes duerman de costado o boca arriba.
 
 ### Desventajas
