@@ -20,14 +20,14 @@ Por lo general, cuando estás buscando un [colchón](https://www.rohisommiers.co
 > En pocas palabras: la espuma ofrece sensación firme, y el colchón de resortes ofrece una sensación más "blandita".
 
 1. ## Espuma
-
-Los colchones de [espuma](https://www.rohisommiers.com/colchones/?mpage=2&Tipo%20De%20Relleno=Espuma) se caracterizan por su **densidad** (kg/m^3^). A mayor densidad, mayor firmeza, durabilidad, soporte, y precio. Por lo general, si buscás un colchón que no sea muy duro, te conviene **descartar esta opción**.
+![Interior de un colchón de espuma](src/assets/images/espuma.jpg 'Interior de un colchón de espuma')
+Los colchones de [espuma](https://www.rohisommiers.com/colchones/?mpage=2&Tipo%20De%20Relleno=Espuma) se caracterizan por su **densidad** (kg/m<sup>3</sup>). A mayor densidad, mayor firmeza, durabilidad, soporte, y precio. Por lo general, si buscás un colchón que no sea muy duro, te conviene **descartar esta opción**.
 
 La densidad de colchones suelen ser de:
-- 23 kg/m^3^, que soporta 70 kg por lado. [Ver colchones para 70 kg por lado](https://www.rohisommiers.com/search/?q=familiar)
-- 25 kg/m^3^, que soporta 85 kg por lado. [Ver colchones para 85 kg por lado](https://www.rohisommiers.com/search/?q=super)
-- 30 kg/m^3^, que soporta 100-110 kg por lado. [Ver colchones para 110 kg por lado](https://www.rohisommiers.com/search/?q=alta+densidad)
-- 35 kg/m^3^, que soporta hasta 130 kg por lado. [Ver colchones para 130 kg por lado](https://www.rohisommiers.com/search/?q=paris)
+- 23 kg/m<sup>3</sup>, que soporta 70 kg por lado. [Ver colchones para 70 kg por lado](https://www.rohisommiers.com/search/?q=familiar)
+- 25 kg/m<sup>3</sup>, que soporta 85 kg por lado. [Ver colchones para 85 kg por lado](https://www.rohisommiers.com/search/?q=super)
+- 30 kg/m<sup>3</sup>, que soporta 100-110 kg por lado. [Ver colchones para 110 kg por lado](https://www.rohisommiers.com/search/?q=alta+densidad)
+- 35 kg/m<sup>3</sup>, que soporta hasta 130 kg por lado. [Ver colchones para 130 kg por lado](https://www.rohisommiers.com/search/?q=paris)
 
 ### Ventajas
 - Si bien existe un rango amplio de precios, si comparamos sobre una durabilidad determinada (por ejemplo, 10 años) el colchón de espuma es más económico. 
@@ -46,12 +46,12 @@ Los colchones de [resortes](https://www.rohisommiers.com/colchones/?mpage=2&Tipo
 Se clasifican en dos tipos:
 
 #### Resortes bonell
-![Resortes Bonell](~/assets/images/Bonell-Springs.jpg "Resortes bonell")
+![Resortes Bonell](src/assets/images/Bonnell-Springs.jpg "Resortes bonell")
 
 Son los más reforzados y comunes, y la parrilla de resortes es continua. 
 
 #### Resortes pocket individuales
-![Resortes Pocket Individuales](~/assets/images/pocket.jpg "Resortes pocket individuales")
+![Resortes Pocket Individuales](src/assets/images/pocket.png "Resortes pocket individuales")
 
 Es un tipo de resortes más nuevo, en el que cada uno está enfundado con tela. Evita que se traslade el movimiento de una persona a la otra y se adapta de forma más anatómica a la presión del cuerpo.
 
@@ -68,4 +68,4 @@ Es un tipo de resortes más nuevo, en el que cada uno está enfundado con tela. 
 
 ## Conclusiones
 
-Lo más importante: si te interesan colchones firmes, inclinate por un colchón de espuma. Si te interesan colchones más blanditos, los colchones de resortes son la opción más adecuada. Si necesitás probarlos para tener una mejor idea, podés (acercarte a nuestros locales)[https://www.rohisommiers.com/sucursales/].
+Lo más importante: si te interesan colchones firmes, inclinate por un colchón de espuma. Si te interesan colchones más blanditos, los colchones de resortes son la opción más adecuada. Si necesitás probarlos para tener una mejor idea, podés[ acercarte a nuestros locales](https://www.rohisommiers.com/sucursales/).
