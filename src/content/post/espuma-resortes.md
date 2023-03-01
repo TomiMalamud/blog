@@ -46,7 +46,7 @@ Los colchones de [resortes](https://www.rohisommiers.com/colchones/?mpage=2&Tipo
 Se clasifican en dos tipos:
 
 #### Resortes bonell
-![Resortes Bonell](public/assets/Bonnell-Springs.jpg "Resortes bonell")
+![Resortes Bonell](../public/assets/Bonnell-Springs.jpg "Resortes bonell")
 
 Son los más reforzados y comunes, y la parrilla de resortes es continua. 
 
