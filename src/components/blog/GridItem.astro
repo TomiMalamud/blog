@@ -19,12 +19,12 @@ const image = await findImage(post.image);
 <article class="mb-6 transition">
 	<div class="group">
 		<a class="relative block overflow-hidden" href={getPermalink(post.permalink, 'post')} title={post.title}>
-			<div class="relative overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow mb-6">
+			<div class="relative overflow-hidden bg-gray-400  rounded shadow mb-6">
 				{
 					image && (
 						<Picture
 							src={image}
-							class="object-cover w-full rounded group-hover:scale-105 ease-out duration-500 shadow bg-gray-400 dark:bg-slate-700"
+							class="object-cover w-full rounded group-hover:scale-105 ease-out duration-500 shadow bg-gray-400 "
 							widths={[400, 900]}
 							sizes="(max-width: 900px) 400px, 900px"
 							alt={post.title}
@@ -44,9 +44,9 @@ const image = await findImage(post.image);
 					)
 				}
 			</h3>
-			<p class="text-gray-700 dark:text-gray-400"><a href={getPermalink(post.permalink, 'post')}>{post.excerpt || post.description}</a> </p>
+			<p class="text-gray-700 "><a href={getPermalink(post.permalink, 'post')}>{post.excerpt || post.description}</a> </p>
 			<div class="mt-2">
-				<span class="text-gray-500 dark:text-slate-400">
+				<span class="text-gray-500 ">
 					<time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time> ~
 					4 min de lectura
 				</span>

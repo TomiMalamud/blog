@@ -33,34 +33,36 @@ const social = [
 ];
 ---
 
-<footer class="border-t border-gray-200 dark:border-slate-800 mt-20">
+<footer class="border-t border-gray-200  mt-20">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
 			<div class="col-span-12 md:col-span-3">
 				<div class="mb-2">
 					<a class="inline-block font-bold text-rohi text-xl" href={getHomePermalink()}>ROHI Sommiers</a>
 				</div>
-				<div class="text-sm text-gray-600">
+				<ul class="text-sm text-gray-600">
+					<li>
 					<a
-						class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+						class="text-gray-600 hover:text-gray-700 hover:underline transition duration-150 ease-in-out"
 						href={getPermalink('/tyc')}>Términos y Condiciones</a
-					><span class="sm:hidden px-2"> · </span>
+					></li>
+					<li>
 					<a
-						class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition whitespace-nowrap leading-8 duration-150 ease-in-out"
+						class="text-gray-600 hover:text-gray-700  hover:underline transition whitespace-nowrap leading-8 duration-150 ease-in-out"
 						href={getPermalink('/privacidad')}>Política de privacidad</a
-					>
-				</div>
+					></li>
+				</ul>
 			</div>
 			{
 				links.map(({ title, items }) => (
 					<div class="col-span-6 md:col-span-3">
-						<div class="text-gray-800 dark:text-gray-300 font-medium mb-4 text-lg md:text-xl">{title}</div>
+						<div class="text-gray-800  font-medium mb-4 text-lg md:text-xl">{title}</div>
 						{items && Array.isArray(items) && items.length > 0 && (
 							<ul class="text-md md:text-lg">
 								{items.map(({ title, href }) => (
 									<li class="mb-2">
 										<a
-											class="text-gray-600 hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+											class="text-gray-600 hover:text-gray-700 hover:underline  transition duration-150 ease-in-out"
 											href={href}
 										>
 											{title}
@@ -83,7 +85,7 @@ const social = [
 					social.map(({ label, href, icon }) => (
 						<li>
 							<a
-								class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+								class="text-gray-500  hover:bg-gray-100  focus:outline-none focus:ring-4 focus:ring-gray-200  rounded-lg text-sm p-2.5 inline-flex items-center"
 								aria-label={label}
 								href={href}
 							>

@@ -6,13 +6,13 @@ import sitemap from '@astrojs/sitemap';
 import image from '@astrojs/image';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
-import compress from 'astro-compress';
-import { remarkReadingTime } from './src/utils/frontmatter.mjs';
+import Compress from 'astro-compress';
 import { SITE } from './src/config.mjs';
 import robotsTxt from "astro-robots-txt";
-
+import compress from "astro-compress";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const whenExternalScripts = (items = []) => SITE.googleAnalyticsId ? Array.isArray(items) ? items.map(item => item()) : [items()] : [];
+
 
 // https://astro.build/config
 
@@ -29,29 +29,26 @@ export default defineConfig({
   }), sitemap({
     changefreq: 'weekly',
     priority: 1,
-    lastmod: new Date(),
+    lastmod: new Date()
   }), image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), mdx(), ...whenExternalScripts(() => partytown({
     config: {
       forward: ['dataLayer.push']
     }
-  })), compress({
+  })), Compress({
     css: true,
     html: true,
     img: false,
     js: true,
     svg: false,
     logger: 1
-  }), robotsTxt()],
-  markdown: {
-    remarkPlugins: [remarkReadingTime],
-  },
+  }), robotsTxt(), compress()],
   vite: {
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src')
       }
     }
-  },
+  }
 });
