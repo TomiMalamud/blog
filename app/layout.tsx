@@ -2,6 +2,8 @@ import "./globals.css"
 import { Public_Sans } from "next/font/google"
 import { Analytics } from "@/components/analytics"
 import Header from "@/components/header"
+import Footer from "@/components/footer"
+
 const public_sans = Public_Sans({ subsets: ["latin"] })
 
 export const metadata = {
@@ -24,6 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <main className="max-w-6xl mx-auto px-4">{children}</main>
           </div>
           <Analytics />
+          <Footer />
       </body>
     </html>
   )

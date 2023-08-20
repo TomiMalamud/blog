@@ -1,9 +1,9 @@
 export default function Hero() {
   return (
-    <div className="relative pt-20 md:pt-0 isolate px-6 lg:px-8">
-      <div className="mx-auto max-w-2x py-18 sm:py-24 lg:py-28">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+    <div className="relative sm:pt-20 md:pt-0 isolate px-6 lg:px-8">
+      <div className="mx-auto max-w-2x py-9 sm:py-12 lg:py-14">
+        <div className="text-center sm:mb-8 sm:flex sm:justify-center">
+          <div className="relative mb-8 rounded-full px-3 py-2 sm:py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             Nuestra visión es construir una Argentina mejor descansada.{" "}
             <a
               href="https://rohisommiers.com/quienes-somos"
@@ -15,14 +15,14 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+        <div className="text-center mx-auto">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Empezá a dormir mejor desde{" "}
             <span className="underline decoration-wavy underline-offset-4 decoration-rohi">
               hoy
             </span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg sm:mx-36 text-center leading-8 text-gray-600">
             En nuestro <strong>Blog</strong> vas a encontrar novedades sobre
             cómo dormir mejor, cómo elegir un buen colchón, cómo decorar un
             dormitorio, las últimas tendencias de diseño y mucho más.

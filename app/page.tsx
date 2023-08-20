@@ -3,6 +3,8 @@ import Hero from "@/components/hero";
 import Image from "next/image";
 import Link from "next/link";
 import ArgDate from "@/components/date";
+import Newsletter from "@/components/newsletter";
+
 export default function Home() {
   return (
     <>
@@ -49,7 +51,12 @@ export default function Home() {
             </div>
           </article>
         ))}
+
       </div>
+      <div className="border rounded-lg my-10 p-5 sm:p-10 bg-slate-100/40">
+        <h3 className="font-bold mb-2 text-md sm:text-lg">Suscribite para conocer lo último sobre descanso</h3>
+        <Newsletter />
+        </div>
     </>
   );
 }
