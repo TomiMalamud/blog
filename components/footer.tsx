@@ -1,4 +1,4 @@
-import { InstagramLogoIcon } from "@radix-ui/react-icons";
+import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Newsletter from "components/newsletter";
 import Link from "next/link";
 
@@ -44,12 +44,7 @@ const social = [
     href: "https://facebook.com/rohisommiers"
   },
   {
-    label: "Pinterest",
-    icon: "tabler:brand-pinterest",
-    href: "https://pinterest.com/rohisommiers"
-  },
-  {
-    label: "Linkedin",
+    label: "LinkedIn",
     icon: "tabler:brand-linkedin",
     href: "https://www.linkedin.com/company/rohi-sommiers/"
   }
@@ -60,37 +55,66 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto px-4 sm:px-6">
       <div className="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
         <div className="col-span-12 md:col-span-3">
-          <div className="mb-2">
-            <Link href="/" className="inline-block font-bold text-rohi text-xl">
-              ROHI Sommiers
-            </Link>
+          <div className=" flex sm:block justify-between">
+            <div>
+              <Link
+                href="/"
+                className="inline-block font-bold mb-2 text-rohi text-xl"
+              >
+                ROHI Sommiers
+              </Link>
+              <ul className="text-sm text-gray-600">
+                <li>
+                  <Link
+                    href="/tyc"
+                    className="text-gray-600 hover:text-gray-700 hover:underline transition duration-150 ease-in-out"
+                  >
+                    Términos y Condiciones
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tyc#privacidad"
+                    className="text-gray-600 hover:text-gray-700 hover:underline transition whitespace-nowrap leading-8 duration-150 ease-in-out"
+                  >
+                    Política de privacidad
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="flex mb-4 items-center">
+              <ul className="flex">
+                <li>
+                  <a
+                    className="text-gray-500  hover:bg-gray-100  focus:outline-none focus:ring-4 focus:ring-gray-200  rounded-lg text-sm p-2.5 inline-flex items-center"
+                    aria-label="instagram"
+                    href="https://instagram.com/rohisommiers"
+                    target="_blank"
+                  >
+                    <InstagramLogoIcon className="w-5 h-5" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-gray-500  hover:bg-gray-100  focus:outline-none focus:ring-4 focus:ring-gray-200  rounded-lg text-sm p-2.5 inline-flex items-center"
+                    aria-label="facebook"
+                    href="https://www.linkedin.com/company/rohi-sommiers/"
+                    target="_blank"
+                  >
+                    <LinkedInLogoIcon className="w-5 h-5" />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <ul className="text-sm text-gray-600">
-            <li>
-              <Link
-                href="/tyc"
-                className="text-gray-600 hover:text-gray-700 hover:underline transition duration-150 ease-in-out"
-              >
-                Términos y Condiciones
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/tyc#privacidad"
-                className="text-gray-600 hover:text-gray-700 hover:underline transition whitespace-nowrap leading-8 duration-150 ease-in-out"
-              >
-                Política de privacidad
-              </Link>
-            </li>
-          </ul>
         </div>
         {links.map(({ title, items }) => (
           <div className="col-span-6 md:col-span-3" key={title}>
-            <div className="text-gray-800  font-medium mb-4 text-lg md:text-xl">
+            <div className="text-gray-800 font-bold mb-4 text-md sm:text-lg">
               {title}
             </div>
             {items && Array.isArray(items) && items.length > 0 && (
-              <ul className="text-md md:text-lg">
+              <ul className="text-md">
                 {items.map(({ title, href }) => (
                   <li className="mb-2" key={title}>
                     <a
@@ -110,22 +134,6 @@ const Footer = () => (
           <p className="text-gray-600 mb-2">Suscribite</p>
           <Newsletter />
         </div>
-      </div>
-      <div className="md:flex md:items-center md:justify-between py-6 md:py-8">
-        <ul className="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-          {social.map(({ label, href, icon }) => (
-            <li key={label}>
-              <a
-                className="text-gray-500  hover:bg-gray-100  focus:outline-none focus:ring-4 focus:ring-gray-200  rounded-lg text-sm p-2.5 inline-flex items-center"
-                aria-label={label}
-                href={href}
-                target="_blank"
-              >
-                <InstagramLogoIcon className="w-5 h-5" />
-              </a>
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   </footer>

@@ -1,5 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
-
+import readingTime from "reading-time"
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
   slug: {
@@ -9,6 +9,10 @@ const computedFields = {
   slugAsParams: {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+  },
+  readingTime: {
+    type: "json",
+    resolve: (doc) => readingTime(doc.body.raw),
   },
 }
 
@@ -53,8 +57,12 @@ export const Post = defineDocumentType(() => ({
     image: {
       type: "string",
     },
-    author: {type:"string"},
-
+    imageAlt: {
+      type: "string",
+    },
+    author: {
+      type:"string"
+    },
   },
   computedFields,
 }))

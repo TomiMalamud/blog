@@ -53,14 +53,16 @@ export default async function PostPage({ params }: PostProps) {
   return (
     <>
       <article className="py-6 mx-auto prose">
-        {post.date && <ArgentineFormattedDate date={post.date} />}
-
+        <div className="flex items-center">
+        {post.date && (<ArgentineFormattedDate date={post.date} />)}
+        <span className="mx-2">·</span><span>{Math.round(post.readingTime.minutes)} min de lectura</span>
+        </div>
         <h1 className="my-2 text-slate-850 tracking-tight">{post.title}</h1>
         {post.description && (
           <p className="text-xl mt-0 text-slate-700">{post.excerpt}</p>
         )}
         {post.author && (
-          <p className="text-sm mt-0 text-slate-700">Por {post.author}</p>
+          <p className="text-md mt-0 text-slate-700 font-bold">Por: {post.author}</p>
         )}
         <hr className="my-4" />
         <div className="w-full block relative overflow-hidden">
