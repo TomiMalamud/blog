@@ -10,4 +10,4 @@ The ROHI Sommiers Blog is a scalable and a blazingly fast website developed usin
 - **[Reading-time](https://www.npmjs.com/package/reading-time)**
 - **(Coming Soon) [Notion](https://www.notion.so/)**. Planned integration with Notion as a CMS using Content Layer.
 
-Focused on performance.
+[Focused on performance](https://pagespeed.web.dev/analysis/https-blog-rohisommiers-com/ytu38p0onh?form_factor=mobile).
