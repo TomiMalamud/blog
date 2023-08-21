@@ -23,9 +23,9 @@ export default function Home() {
                 {post.image && (
                   <Image
                     src={post.image}
-                    width={500}
-                    height={300}
-                    className="aspect-video sm:aspect-square rounded-md h-auto w-auto object-cover transition hover:scale-105"
+                    width={300}
+                    height={180}
+                    className="aspect-video sm:aspect-square rounded-md h-full w-full object-cover transition hover:scale-105"
                     alt={`Imagen del post "${post.title}"`}
                   />
                 )}

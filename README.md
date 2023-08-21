@@ -1,7 +1,13 @@
-# Next.js + Contentlayer
+# ROHI Sommiers Blog
 
-A template with Next.js 13 app dir, Contentlayer, Tailwind CSS and dark mode.
+## Overview
+The ROHI Sommiers Blog is a scalable and a blazingly fast website developed using the following technologies:
 
-https://next-contentlayer.vercel.app
+- **[Next.js 13](https://nextjs.org/)**
+- **[Tailwind CSS](https://tailwindcss.com/)**
+- **[Content Layer](https://www.contentlayer.dev)**
+- **[Tally Forms](https://tally.so/)**
+- **[Reading-time](https://www.npmjs.com/package/reading-time)**
+- **(Coming Soon) [Notion](https://www.notion.so/)**. Planned integration with Notion as a CMS using Content Layer.
 
-
+Focused on performance.
