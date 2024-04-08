@@ -49,35 +49,58 @@ export default async function PostPage({ params }: PostProps) {
   if (!post) {
     notFound();
   }
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    image: [post.image],
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author
+    },
+    description: post.description
+  };
 
   return (
     <>
+      <section>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </section>
+
       <article className="py-6 mx-auto prose">
         <div className="flex items-center">
-        {post.date && (<ArgentineFormattedDate date={post.date} />)}
-        <span className="mx-2">·</span><span>{Math.round(post.readingTime.minutes)} min de lectura</span>
+          {post.date && <ArgentineFormattedDate date={post.date} />}
+          <span className="mx-2">·</span>
+          <span>{Math.round(post.readingTime.minutes)} min de lectura</span>
         </div>
         <h1 className="my-2 text-slate-850 tracking-tight">{post.title}</h1>
         {post.description && (
           <p className="text-xl mt-0 text-slate-700">{post.excerpt}</p>
         )}
         {post.author && (
-          <p className="text-md mt-0 text-slate-700 font-bold">Por: {post.author}</p>
+          <p className="text-md mt-0 text-slate-700 font-bold">
+            Por: {post.author}
+          </p>
         )}
         <hr className="my-4" />
         <div className="w-full block relative overflow-hidden">
-        {post.image && (
-          <Image
-            src={post.image}
-            width={500}
-            height={300}
-            className="aspect-video object-cover w-full"
-            alt={`Imagen del post "${post.title}"`}
-          />
-        )}
+          {post.image && (
+            <Image
+              src={post.image}
+              width={500}
+              height={300}
+              className="aspect-video object-cover w-full"
+              alt={`Imagen del post "${post.title}"`}
+            />
+          )}
         </div>
-        <div  className="md:prose-lg">
-        <Mdx code={post.body.code}/></div>
+        <div className="md:prose-lg">
+          <Mdx code={post.body.code} />
+        </div>
       </article>
     </>
   );
