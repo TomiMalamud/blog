@@ -5,7 +5,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://blog.rohisommiers.com';
 
   const blogUrls = allPosts.map(post => ({
-    url: `${baseUrl}/posts/${post.slug}`,
+    url: `${baseUrl}/${post.slug}`,
     lastModified: new Date(post.date), 
     changeFrequency: 'daily',
     priority: 0.8,
