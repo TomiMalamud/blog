@@ -1,12 +1,14 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  
   return [
     {
-      url: "https://blog.rohisommiers.com",
+      url: 'https://blog.rohisommiers.com',
       lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 1
-    }
-  ];
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    
+  ]
 }
