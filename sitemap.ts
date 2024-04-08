@@ -4,7 +4,7 @@ import { MetadataRoute } from 'next';
 import { allPosts } from "@/.contentlayer/generated";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://rohisommiers.com';
+  const baseUrl = 'https://blog.rohisommiers.com';
 
   const blogUrls = allPosts.map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,

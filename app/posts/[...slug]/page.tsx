@@ -57,7 +57,8 @@ export default async function PostPage({ params }: PostProps) {
     datePublished: post.date,
     author: {
       "@type": "Person",
-      name: post.author
+      name: post.author,
+      url: "https://tmalamud.com",
     },
     description: post.description
   };
