@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-   sitemap: 'https://rohisommiers.com/sitemap.xml', 
+   sitemap: 'https://blog.rohisommiers.com/sitemap.xml', 
   }
 }
